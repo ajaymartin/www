@@ -1,0 +1,7 @@
+ver 0.1.1
+---------
+Added link to logged in users Scrapbook on the top bar
+
+Ver 0.1
+-------
+First release

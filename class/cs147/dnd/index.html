@@ -1,0 +1,668 @@
+<!-- index.html -->
+
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="test.css">
+		<script src="cmndefines.js"></script>	
+		<script type="text/javascript" src="wz_dragdrop/wz_dragdrop.js"></script>
+		<script type="text/javascript" src="dnd.js"></script>
+		<title>Testing Drag and Drop</title>
+	</head>
+
+<body >
+
+<!-- the content of each of the widgets -->
+
+<div id = "widgets" style="display:none" >
+	<div id="x" row="0" col="0">
+		<div id="widgettitle">
+			<b style="color:white" > Calendar </b>
+		</div>
+		<div id="widgetcontent">
+			<table align="center" border="0" cellpadding="5" cellspacing="0">
+			<tbody><tr>
+			<td align="right" nowrap="nowrap"><a href="/calendar/isapi.dll?request=action&amp;operation=prev" style="text-decoration: none;">&nbsp;&nbsp;<img src="http://graphics.hotmail.com/calimg/EN/img/arrow_left.gif" alt="Previous Day" border="0">&nbsp;&nbsp;</a></td>
+
+			<td style="padding-left: 15px; padding-right: 15px;" class="currentVw" align="center" nowrap="nowrap" width="240">Monday,  November 14</td>
+			<td align="left" nowrap="nowrap"><a href="/calendar/isapi.dll?request=action&amp;operation=next" style="text-decoration: none;">&nbsp;&nbsp;<img src="http://graphics.hotmail.com/calimg/EN/img/arrow_right.gif" alt="Next Day" border="0">&nbsp;&nbsp;</a></td>
+			<td align="center" valign="top" width="50%"></td>
+			</tr>
+			</tbody></table>
+			<table bgcolor="white" border="0" cellpadding="0" cellspacing="0" width="100%">
+
+
+
+
+
+
+			<tbody><tr height="20">
+			<td style="border-top: 1px solid rgb(193, 205, 216); background-color: rgb(219, 234, 245); height: 21px;" align="center">&nbsp;</td>
+
+			<td colspan="1" style="border-top: 1px solid rgb(193, 205, 216); background-color: rgb(219, 234, 245); height: 21px;" nowrap="nowrap" valign="middle" width="100%">
+
+			<table border="0" cellpadding="0" cellspacing="0" height="100%" width="100%"><tbody><tr>
+			<td align="left" nowrap="nowrap" valign="middle"><font class="listHeadFont">My Calendar</font></td>
+
+			<td style="border-top: 1px solid rgb(193, 205, 216); background-color: rgb(219, 234, 245); height: 21px;" align="right" nowrap="nowrap" valign="middle">
+			<a tabindex="5" href="/calendar/isapi.dll?request=action&amp;operation=toggleSharing">
+
+			<img src="http://graphics.hotmail.com/calimg/EN/img/chevron_left.gif" alt="Expand sharing column" border="0" hspace="5">
+			</a>
+			<font class="listHeadFont">.</font>
+			</td>
+
+			</tr></tbody></table>
+			</td>
+
+			</tr>
+
+			<tr>
+			<td style="background-color: rgb(193, 205, 216);" height="2"></td>
+			<td colspan="1" style="background-color: rgb(193, 205, 216);" height="2"></td>
+
+			</tr>
+
+			<tr class="appt" height="20">
+			<td class="bld" style="border-right: 1px solid rgb(204, 204, 204);" align="center" nowrap="nowrap" valign="middle">
+			&nbsp;<a href="javascript:doNewAppt('allday');">
+			<font class="K">All Day</font>
+			</a>&nbsp;
+			</td>
+
+
+
+
+			<td colspan="1" width="100%">&nbsp;</td>
+
+
+			</tr>
+			<tr>
+			<td style="background-color: rgb(193, 205, 216);" height="2"></td>
+
+			<td colspan="1" style="background-color: rgb(193, 205, 216);" height="2"></td>
+
+				
+			</tr>
+
+			<tr>
+
+			<td rowspan="2" class="timeRow" style="border-right: 1px solid rgb(204, 204, 204);" align="center" nowrap="nowrap" valign="middle">
+
+			<!-- removed the href for appointments for messenger only -->
+
+			<a tabindex="1" href="/calendar/isapi.dll?request=view&amp;operation=new&amp;hour=9&amp;uicode1=addappointment">
+
+
+			<font class="timeFont">9 <font size="2">AM</font></font>
+
+
+			</a>
+
+
+			</td>
+
+
+
+
+
+			<td class="noAppt" ondblclick="javascript:doNewAppt(9,0,'null');" height="20" width="100%">&nbsp;</td>
+
+
+
+
+
+			</tr>
+
+
+			<tr>
+
+
+
+
+
+			<td class="noAppt" ondblclick="javascript:doNewAppt(9,30,'null');" height="20" width="100%">&nbsp;</td>
+
+
+
+
+
+			</tr>
+
+
+			<tr>
+
+			<td rowspan="2" class="timeRow" style="border-right: 1px solid rgb(204, 204, 204);" align="center" nowrap="nowrap" valign="middle">
+
+			<!-- removed the href for appointments for messenger only -->
+
+			<a tabindex="1" href="/calendar/isapi.dll?request=view&amp;operation=new&amp;hour=10&amp;uicode1=addappointment">
+
+
+			<font class="timeFont">10 <font size="2">AM</font></font>
+
+
+			</a>
+
+
+			</td>
+
+
+
+
+
+			<td class="noAppt" ondblclick="javascript:doNewAppt(10,0,'null');" height="20" width="100%">&nbsp;</td>
+
+
+
+
+
+			</tr>
+
+
+			<tr>
+
+
+
+
+
+
+			<td class="noAppt" ondblclick="javascript:doNewAppt(10,30,'null');" height="20" width="100%">&nbsp;</td>
+
+
+
+
+
+			</tr>
+
+
+			<tr>
+
+			<td rowspan="2" class="timeRow" style="border-right: 1px solid rgb(204, 204, 204);" align="center" nowrap="nowrap" valign="middle">
+
+			<!-- removed the href for appointments for messenger only -->
+
+			<a tabindex="1" href="/calendar/isapi.dll?request=view&amp;operation=new&amp;hour=11&amp;uicode1=addappointment">
+
+			<font class="timeFont">11 <font size="2">AM</font></font>
+
+
+			</a>
+
+
+			</td>
+
+
+
+
+
+
+			<td class="noAppt" ondblclick="javascript:doNewAppt(11,0,'null');" height="20" width="100%">&nbsp;</td>
+
+
+
+
+
+			</tr>
+
+
+			<tr>
+
+
+
+
+
+
+			<td class="noAppt" ondblclick="javascript:doNewAppt(11,30,'null');" height="20" width="100%">&nbsp;</td>
+
+
+
+
+			</tr>
+
+
+			<tr>
+
+			<td rowspan="2" class="timeRow" style="border-right: 1px solid rgb(204, 204, 204);" align="center" nowrap="nowrap" valign="middle">
+
+			<!-- removed the href for appointments for messenger only -->
+
+			<a tabindex="1" href="/calendar/isapi.dll?request=view&amp;operation=new&amp;hour=12&amp;uicode1=addappointment">
+
+
+			<font class="timeFont">12 <font size="2">PM</font></font>
+
+
+			</a>
+
+
+			</td>
+
+
+
+
+
+
+			<td class="noAppt" ondblclick="javascript:doNewAppt(12,0,'null');" height="20" width="100%">&nbsp;</td>
+
+
+
+
+			</tr>
+
+
+			<tr>
+
+
+
+
+
+
+			<td class="noAppt" ondblclick="javascript:doNewAppt(12,30,'null');" height="20" width="100%">&nbsp;</td>
+
+
+
+
+
+			</tr>
+
+
+			<tr>
+
+			<td rowspan="2" class="timeRow" style="border-right: 1px solid rgb(204, 204, 204);" align="center" nowrap="nowrap" valign="middle">
+
+			<!-- removed the href for appointments for messenger only -->
+
+			<a tabindex="1" href="/calendar/isapi.dll?request=view&amp;operation=new&amp;hour=13&amp;uicode1=addappointment">
+
+
+			<font class="timeFont">1 <font size="2">PM</font></font>
+
+
+			</a>
+
+
+			</td>
+
+
+
+
+
+
+			<td class="noAppt" ondblclick="javascript:doNewAppt(13,0,'null');" height="20" width="100%">&nbsp;</td>
+
+
+
+
+
+			</tr>
+
+
+			<tr>
+
+
+
+
+
+
+			<td class="noAppt" ondblclick="javascript:doNewAppt(13,30,'null');" height="20" width="100%">&nbsp;</td>
+
+
+
+
+
+			</tr>
+
+			<tr>
+
+			<td rowspan="2" class="timeRow" style="border-right: 1px solid rgb(204, 204, 204);" align="center" nowrap="nowrap" valign="middle">
+
+			<!-- removed the href for appointments for messenger only -->
+
+			<a tabindex="1" href="/calendar/isapi.dll?request=view&amp;operation=new&amp;hour=14&amp;uicode1=addappointment">
+
+
+			<font class="timeFont">2 <font size="2">PM</font></font>
+
+
+			</a>
+
+			</td>
+
+
+
+
+
+
+			<td class="noAppt" ondblclick="javascript:doNewAppt(14,0,'null');" height="20" width="100%">&nbsp;</td>
+
+
+
+
+
+			</tr>
+
+
+			<tr>
+
+
+
+
+
+
+			<td class="noAppt" ondblclick="javascript:doNewAppt(14,30,'null');" height="20" width="100%">&nbsp;</td>
+
+
+
+
+
+			</tr>
+
+
+			<tr>
+
+			<td rowspan="2" class="timeRow" style="border-right: 1px solid rgb(204, 204, 204);" align="center" nowrap="nowrap" valign="middle">
+
+			<!-- removed the href for appointments for messenger only -->
+
+			<a tabindex="1" href="/calendar/isapi.dll?request=view&amp;operation=new&amp;hour=15&amp;uicode1=addappointment">
+
+
+			<font class="timeFont">3 <font size="2">PM</font></font>
+
+
+			</a>
+
+
+			</td>
+
+
+
+
+
+
+			<td class="noAppt" ondblclick="javascript:doNewAppt(15,0,'null');" height="20" width="100%">&nbsp;</td>
+
+
+
+
+
+			</tr>
+
+
+			<tr>
+
+
+
+
+
+			<td class="noAppt" ondblclick="javascript:doNewAppt(15,30,'null');" height="20" width="100%">&nbsp;</td>
+
+
+
+
+
+			</tr>
+
+
+			<tr>
+
+			<td rowspan="2" class="timeRow" style="border-right: 1px solid rgb(204, 204, 204);" align="center" nowrap="nowrap" valign="middle">
+
+			<!-- removed the href for appointments for messenger only -->
+
+			<a tabindex="1" href="/calendar/isapi.dll?request=view&amp;operation=new&amp;hour=16&amp;uicode1=addappointment">
+
+
+			<font class="timeFont">4 <font size="2">PM</font></font>
+
+
+			</a>
+
+
+			</td>
+
+
+
+
+
+			<td class="noAppt" ondblclick="javascript:doNewAppt(16,0,'null');" height="20" width="100%">&nbsp;</td>
+
+
+
+
+
+			</tr>
+
+
+			<tr>
+
+
+
+
+
+			<td class="noAppt" ondblclick="javascript:doNewAppt(16,30,'null');" height="20" width="100%">&nbsp;</td>
+
+
+
+
+
+			</tr>
+
+
+			<tr>
+
+			<td rowspan="2" class="timeRow" style="border-right: 1px solid rgb(204, 204, 204);" align="center" nowrap="nowrap" valign="middle">
+
+			<!-- removed the href for appointments for messenger only -->
+
+			<a tabindex="1" href="/calendar/isapi.dll?request=view&amp;operation=new&amp;hour=17&amp;uicode1=addappointment">
+
+
+			<font class="timeFont">5 <font size="2">PM</font></font>
+
+
+			</a>
+
+
+			</td>
+
+
+
+
+
+			<td class="noAppt" ondblclick="javascript:doNewAppt(17,0,'null');" height="20" width="100%">&nbsp;</td>
+
+
+
+
+
+			</tr>
+
+
+			<tr>
+
+
+
+
+
+			<td class="noAppt" ondblclick="javascript:doNewAppt(17,30,'null');" height="20" width="100%">&nbsp;</td>
+
+
+
+
+
+			</tr>
+
+
+			</tbody></table>
+			</form></td>
+			</tr>
+			<tr><td colspan="3">&nbsp;</td></tr>
+
+			 
+
+			</tbody>
+					</tbody></table>
+		</div>
+	</div>
+	<div id="y" row="0" col="1">
+		<div id="widgettitle">
+			<b style="color:white" > Announcements </b>
+		</div>
+		<div id="widgetcontent"><br/>	
+			&nbsp;&nbsp;We shall have icons and actions in this area here:	<br/><br/>
+			<table style="border-top:2px solid red;border-bottom:2px solid red">
+				<tbody><tr class="ur" id="w_1"><td align="right"><input type="checkbox"></td><td class="v">&nbsp;</td><td><span id="_user_amit@picorp.com"><b>amitabh mehta</b></span></td><td>&nbsp;</td><td><span class="ct"></span> <b>[Fwd: Complete: Feature Start: Web APIs for Image Resizing]</b> <span class="p"> - Please ensure that you are invoking image APIs with right parameters. Specifically, please check …</span></td><td>&nbsp;</td><td><span id="_date_Mon Nov 14 2005_2:18 AM"><b>2:18 am</b></span></td></tr><tr class="ur" id="w_2"><td align="right"><input type="checkbox"></td><td class="v">&nbsp;</td><td><span id="_user_santo@picorp.com"><b>santo</b></span></td><td>&nbsp;</td><td><span class="ct"></span> <b>Urgent::Registration will not work on Pimesh.com</b> <span class="p"> - Hi all Registration will not work on pimesh.com Will inform you once this is back on Regards …</span></td><td>&nbsp;</td><td><span id="_date_Mon Nov 14 2005_1:58 AM"><b>1:58 am</b></span></td></tr><tr class="rr" id="w_3"><td align="right"><input type="checkbox"></td><td class="v">&nbsp;</td><td><span id="_user_comics@comicmembers.com">comics</span></td><td>&nbsp;</td><td><span class="ct">Dilbert</span> Your Daily Dilbert <span class="p"> - Daily Dilbert Advertisement Hi Ajay Martin, enjoy your daily comic from Dilbert.com. 11/14/2005 …</span></td><td>&nbsp;</td><td><span id="_date_Mon Nov 14 2005_12:26 AM">12:26 am</span></td></tr><tr class="rr" id="w_4"><td align="right"><input type="checkbox"></td><td class="v">&nbsp;</td><td><span id="_user_nasar@picorp.com">Nasar Sherieff</span></td><td>&nbsp;</td><td><span class="ct"></span> Local yum server in B'lore <span class="p"> - Hi All, A local yum server is available now for Linux Fedora 3 and 4 updates and other base rpms …</span></td><td>&nbsp;</td><td><span id="_date_Sun Nov 13 2005_11:08 PM">11:08 pm</span></td></tr></tbody>
+			</table>
+		</div>
+	</div>
+	<div id="z" row="1" col="1">
+		<div id="widgettitle">
+			<b style="color:white" > TODO </b>
+			</div>
+		<div id="widgetcontent">
+			<table>
+							<tbody><tr><td colspan="9" height="4"><img src="http://graphics.hotmail.com/calimg/EN/img/space.gif" height="4" width="4"></td></tr>
+				<tr><td colspan="9"><img src="http://graphics.hotmail.com/calimg/EN/img/space.gif" height="3" width="1"></td></tr>
+				<tr class="whtBg">
+
+				<td class="titlelistTD" align="center">&nbsp;&nbsp;<a href="/tasks/isapi.dll?sortKey=priority&amp;17002" tabindex="1"><font class="listHeadFont"><img src="http://graphics.hotmail.com/calimg/EN/img/importance_high.gif" alt="Priority" border="0"></font></a>&nbsp;</td>
+
+				<td class="titlelistTD" align="center"><img src="http://graphics.hotmail.com/calimg/EN/img/msalert.gif" alt="Reminder"></td>
+				<td class="titlelistTD" align="center"><img src="http://graphics.hotmail.com/calimg/EN/img/attachment.gif"></td>
+				<td class="titlelistTD" align="center"><input id="allbox" name="allbox" value="" onclick="javascript:doCheckBox(document.theForm, this)" tabindex="1" type="checkbox"></td>
+
+				<td class="titlelistTD" nowrap="nowrap" width="100%">&nbsp;<a href="/tasks/isapi.dll?sortKey=description&amp;17002" tabindex="1"><font class="listHeadFont">Subject</font></a>&nbsp;</td>
+
+
+				<td class="sortTD" nowrap="nowrap" width="100%">
+
+				&nbsp;<a href="/tasks/isapi.dll?sortKey=duedate&amp;17002" tabindex="1">
+				<font class="listHeadFont">
+
+
+				Due date
+
+
+				</font>
+				<img src="http://graphics.hotmail.com/calimg/EN/img/SortUp.gif" border="0" height="7" width="7">
+				</a>&nbsp;</td>
+
+				<td class="titlelistTD" nowrap="nowrap" width="100">&nbsp;&nbsp;<a href="/tasks/isapi.dll?sortKey=status&amp;17002" tabindex="1"><font class="listHeadFont">Status</font></a>&nbsp;</td>
+
+				<td class="titlelistTD" width="25"><img src="http://graphics.hotmail.com/calimg/EN/img/space.gif" height="1" width="25"></td>
+				</tr>
+				<tr ondblclick="location.href='/tasks/isapi.dll?request=action&operation=modify&objectID=3&uicode5=edit';" bgcolor="#ffffff">
+
+				<td class="listTD" align="center" height="20" nowrap="nowrap">&nbsp;&nbsp;<img src="http://graphics.hotmail.com/calimg/EN/img/space.gif" border="0" height="9" width="8"> </td>
+				<td class="listTD" align="center" nowrap="nowrap">
+
+				<img src="http://graphics.hotmail.com/calimg/EN/img/space.gif" height="1" width="1">
+
+				</td>
+				<td class="listTD" align="center">
+
+				<img src="http://graphics.hotmail.com/calimg/EN/img/space.gif" height="1" width="1">
+
+				</td>
+				<td class="listTD" align="center" height="20" nowrap="nowrap"><input id="taskCheckID" name="objectID" value="3" onclick="javascript:doCheckBox(document.theForm, this);" tabindex="1" type="checkbox"></td>
+				<td class="listTD" nowrap="nowrap" width="100%">&nbsp;<a href="/tasks/isapi.dll?request=action&amp;operation=modify&amp;objectID=3&amp;uicode5=edit" tabindex="1">todo 3</a></td>
+				<td class="listTD" nowrap="nowrap" width="100">&nbsp;
+
+				8/8/08
+
+
+				&nbsp;
+				</td>
+				<td class="listTD" nowrap="nowrap" width="100">&nbsp;&nbsp;Not started&nbsp;</td>
+				<td class="listTD"><img src="http://graphics.hotmail.com/calimg/EN/img/space.gif"></td>
+				</tr>
+
+
+				<tr ondblclick="location.href='/tasks/isapi.dll?request=action&operation=modify&objectID=2&uicode5=edit';" bgcolor="#ffffff">
+				<td class="listTD" align="center" height="20" nowrap="nowrap">&nbsp;&nbsp;<img src="http://graphics.hotmail.com/calimg/EN/img/space.gif" border="0" height="9" width="8"> </td>
+				<td class="listTD" align="center" nowrap="nowrap">
+
+				<img src="http://graphics.hotmail.com/calimg/EN/img/space.gif" height="1" width="1">
+
+				</td>
+
+				<td class="listTD" align="center">
+
+				<img src="http://graphics.hotmail.com/calimg/EN/img/space.gif" height="1" width="1">
+
+				</td>
+				<td class="listTD" align="center" height="20" nowrap="nowrap"><input id="taskCheckID" name="objectID" value="2" onclick="javascript:doCheckBox(document.theForm, this);" tabindex="1" type="checkbox"></td>
+				<td class="listTD" nowrap="nowrap" width="100%">&nbsp;<a href="/tasks/isapi.dll?request=action&amp;operation=modify&amp;objectID=2&amp;uicode5=edit" tabindex="1">and another todo item</a></td>
+				<td class="listTD" nowrap="nowrap" width="100">&nbsp;
+
+				2/3/06
+
+
+				&nbsp;
+				</td>
+				<td class="listTD" nowrap="nowrap" width="100">&nbsp;&nbsp;Not started&nbsp;</td>
+				<td class="listTD"><img src="http://graphics.hotmail.com/calimg/EN/img/space.gif"></td>
+				</tr>
+
+
+				<tr ondblclick="location.href='/tasks/isapi.dll?request=action&operation=modify&objectID=1&uicode5=edit';" bgcolor="#ffffff">
+				<td class="listTD" align="center" height="20" nowrap="nowrap">&nbsp;&nbsp;<img src="http://graphics.hotmail.com/calimg/EN/img/space.gif" border="0" height="9" width="8"> </td>
+				<td class="listTD" align="center" nowrap="nowrap">
+
+				<img src="http://graphics.hotmail.com/calimg/EN/img/space.gif" height="1" width="1">
+
+				</td>
+				<td class="listTD" align="center">
+
+				<img src="http://graphics.hotmail.com/calimg/EN/img/space.gif" height="1" width="1">
+
+				</td>
+				<td class="listTD" align="center" height="20" nowrap="nowrap"><input id="taskCheckID" name="objectID" value="1" onclick="javascript:doCheckBox(document.theForm, this);" tabindex="1" type="checkbox"></td>
+				<td class="listTD" nowrap="nowrap" width="100%">&nbsp;<a href="/tasks/isapi.dll?request=action&amp;operation=modify&amp;objectID=1&amp;uicode5=edit" tabindex="1"><font class="redTxt">test todo 1</font></a></td>
+
+				<td class="listTD" nowrap="nowrap" width="100">&nbsp;
+
+				<font class="redTxt">3/1/04</font>
+
+
+				&nbsp;
+				</td>
+				<td class="listTD" nowrap="nowrap" width="100">&nbsp;&nbsp;In progress&nbsp;</td>
+				<td class="listTD"><img src="http://graphics.hotmail.com/calimg/EN/img/space.gif"></td>
+				</tr>
+
+
+				<tr> <td colspan="9" height="4"><spacer type="vertical" size="4"></td></tr>
+
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+
+<!-- end content xml -->
+
+<hr/><br/><br/><br/>
+
+<!-- the table that initially aligns and sets the sizes of the various widgets -->
+<table id="main" width="90%" align="center" >
+	<tr valign="top" style="padding-bottom:20px">
+		<td/>
+	</tr>
+</table>
+
+<!-- debug div call debug() -->
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<p id="debug"></p>
+
+</body>
+
+<!-- initialize the drang and drop library and setup the various widgets -->
+<script>init();</script>
+
+
+</html>
+
+
+</html>

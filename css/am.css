@@ -1,0 +1,173 @@
+a {
+	font: normal 400 .7em verdana;
+	text-decoration:none;
+	color:darkblue;
+}
+a:hover{
+	font: normal 400 .7em verdana;
+	text-decoration:underline;
+	color:darkblue;
+}
+a.link {
+	font: normal 400 1em verdana;
+	text-decoration:none;
+	color:darkblue;
+}
+a.link:hover{
+	font: normal 400 1em verdana;
+	text-decoration:underline;
+	color:darkblue;
+}
+
+pre {
+	font: normal 400 1em verdana;
+	text-decoration:none;
+	color:darkblue;
+	height:370;
+	width:470;
+	overflow-y:auto;	/* ie specific */
+	overflow:-moz-scrollbars-vertical;/* gecko specific */
+	overflow:auto;
+}
+
+.content{
+	font: normal 400 1em verdana;
+	text-decoration:none;
+	color:darkblue;
+}
+
+.stilts
+{
+	background:Black;
+	width:5px;
+}
+
+.abstract{
+	font: normal 400 .7em verdana;
+	text-decoration:none;
+	color:black;
+}
+
+
+.photo_list{
+	height:370;
+	width:400;
+	overflow-y:auto;	/* ie specific */
+	overflow:-moz-scrollbars-vertical;/* gecko specific */
+	overflow:auto;
+}
+
+.header_unselected
+{
+	font: normal 600 .7em verdana;
+	color:White;
+	text-align:center;
+	background:black;
+	border:solid 1px Black;	
+	border-bottom:solid 1px Gold;	
+}
+
+.header_selected
+{
+	font: normal 600 .7em verdana;
+	text-align:center;
+	border:solid 1px Gold;	
+	border-bottom:solid 0px blue;	
+}
+
+.header_item_selected	
+{
+	border:solid 1px Gold;
+	border-top:solid 0px Gold;
+	
+	font: normal 400 .7em verdana;
+}
+
+.header_link
+{
+	font: normal 600 1em verdana;
+	color:White;
+	text-decoration:none;
+}
+.header_link:hover
+{
+	font: normal 600 1em verdana;
+	color:White;
+	text-decoration:underline;
+}
+
+.header_link_active
+{
+	font: normal 600 1em verdana;
+	text-decoration:none;
+}
+.header_link_active:hover
+{
+	font: normal 600 1em verdana;
+	text-decoration:underline;
+}
+
+.header_item_link
+{
+	color:blue;
+	font: normal 600 .8em verdana;
+	text-decoration:none;
+}
+.header_item_link:hover
+{
+	color:blue;
+	font: normal 600 .8em verdana;
+	text-decoration:underline;
+}
+
+.photo_category_header{
+	display:block;
+	font: normal 600 .8em verdana;
+	text-decoration:none;
+	color:darkblue;
+	margin-bottom:.5em;
+}
+.category_item
+{
+	display:block;
+	font: normal 400 .7em verdana;
+	text-decoration:none;
+	color:darkblue;
+	height:1.3em;
+	overflow:hidden;
+}
+
+.category_item:hover
+{
+	display:block;
+	height:1.3em;
+	font: normal 400 .7em verdana;
+	text-decoration:underline;
+	color:darkblue;
+	overflow:hidden;
+}
+
+.date_item
+{
+	display:block;
+	height:1.3em;
+	font: normal 400 .7em verdana;
+	text-decoration:none;
+	color:darkblue;
+	overflow:hidden;
+}
+.caption_item
+{
+	display:block;
+	font: normal 400 .7em verdana;
+	text-decoration:none;
+	color:darkblue;
+	text-align:right;
+
+}
+.photoList{display:none;}
+
+.image_link{
+	color:white;
+	text-decoration:none;
+}
